@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Blog</h1>
+        <div class="blog-form">
+            <input type="text" id="image-url" placeholder="Image URL">
+            <input type="text" id="title" placeholder="Title">
+            <textarea id="description" placeholder="Blog Description"></textarea>
+            <button onclick="postBlog()">POST BLOG</button>
+        </div>
+        <div id="blog-container">
+            <h2>Total Blog: <span id="blog-count">0</span></h2>
+        </div>
+    </div>
+
+    <!-- Hidden template for blog post -->
+    <div id="blog-template" class="blog-post" style="display: none;">
+        <img src="" alt="">
+        <h3></h3>
+        <p></p>
+        <button class="edit" onclick="editBlog(this)">Edit</button>
+        <button class="delete" onclick="deleteBlog(this)">Delete</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
